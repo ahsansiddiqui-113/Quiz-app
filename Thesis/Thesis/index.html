@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teens Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="auth-page">
+    <div class="content">
+      <h1>Welcome to Teens Quiz</h1>
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Enter Username" required />
+        <input type="password" id="password" placeholder="Enter Password" required />
+        <div class="btn-group">
+          <button type="button" id="signup-btn" class="btn secondary">Sign Up</button>
+          <button type="submit" id="login-btn" class="btn primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container" id="start-page" style="display: none;">
+    <div class="content">
+      <h1>Are You Ready?</h1>
+      <button id="start-btn" class="btn primary large">Start Quiz</button>
+    </div>
+  </div>
+
+  <div class="container" id="quiz-page" style="display: none;">
+    <div class="content">
+      <h1>Bible Quiz</h1>
+      <div class="quiz">
+        <h2 id="question">Question goes here</h2>
+        <div id="answer-buttons" class="answers"></div>
+        <button id="next-btn" class="btn secondary">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Page -->
+  <div class="container" id="results-page" style="display: none;">
+    <div class="content">
+      <h1>Your Results</h1>
+      <p id="results-summary"></p>
+      <button id="exit-btn" class="btn primary">Exit</button>
+    </div>
+  </div>
+
+  <div id="alert-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
